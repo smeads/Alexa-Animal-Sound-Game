@@ -22,7 +22,7 @@
 var questions = [
     {
         "What sound does a dog make?": [
-            "Woof, woof, Woof, woof",
+            "Woof, woof",
             "Meow",
             "Roar",
             "Tweet, tweet, Tweet, tweet"
@@ -31,25 +31,25 @@ var questions = [
     {
         "What sound does a cat make?": [
             "Meow",
-            "Quack, quack, Quack, quack",
-            "Woof, woof, Woof, woof",
+            "Quack, quack",
+            "Woof, woof",
             "Who, who"
         ]
     },
     {
         "What sound does a duck make?": [
-            "Quack, quack, Quack, quack",
-            "Woof, woof, Woof, woof",
+            "Quack, quack",
+            "Woof, woof",
             "Who, who",
-            "Bark, bark, Bark, bark"
+            "Bark, bark"
         ]
     },
     {
         "What sound does a monkey make?": [
             "Ooh, ooh,",
             "Roar",
-            "Gobble, gobble, Gobble, gobble",
-            "Hisssssssssssssssssssssssss"
+            "Gobble, gobble",
+            "Hissssssssssssssssss"
         ]
     },
     {
@@ -113,12 +113,12 @@ var questions = [
             "Bahh, bahh",
             "Who, who",
             "Roar",
-            "Hisssssssssssssss"
+            "Hissssssssssssssssss"
         ]
     },
     {
         "What sound does a snake make?": [
-            "Hisssssssssssssss",
+            "Hissssssssssssssssss",
             "Oink, oink",
             "Neigh",
             "Meow"
@@ -169,7 +169,7 @@ var questions = [
             "Moo",
             "Neigh",
             "Chirp, chirp, Chirp, chirp",
-            "Hisssssssssssssss"
+            "Hissssssssssssssssss"
         ]
     },
     {
@@ -231,7 +231,7 @@ var questions = [
     {
         "What sound does a polar bear make?": [
             "Growl",
-            "Hisssssssssssssss",
+            "HHissssssssssssssssss",
             "Bark, bark",
             "Meow"
         ]
