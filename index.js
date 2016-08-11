@@ -1,18 +1,3 @@
-/**
- Copyright 2014-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
- Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-
- http://aws.amazon.com/apache2.0/
-
- or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
- */
-
-/**
- * This sample shows how to create a simple Trivia skill with a multiple choice format. The skill
- * supports 1 player at a time, and does not support games across sessions.
- */
-
 'use strict';
 
 /**
@@ -21,242 +6,242 @@
  */
 var questions = [
     {
-        "What sound does a dog make?": [
-            "Woof, woof",
+        "What noise does a dog make?": [
+            "Woof",
             "Meow",
             "Roar",
-            "Tweet, tweet, Tweet, tweet"
+            "Tweet"
         ]
     },
     {
-        "What sound does a cat make?": [
+        "What noise does a cat make?": [
             "Meow",
-            "Quack, quack",
-            "Woof, woof",
-            "Who, who"
+            "Quack",
+            "Woof",
+            "Hoo"
         ]
     },
     {
-        "What sound does a duck make?": [
-            "Quack, quack",
-            "Woof, woof",
-            "Who, who",
-            "Bark, bark"
+        "What noise does a duck make?": [
+            "Quack",
+            "Woof",
+            "Hoo",
+            "Ooh"
         ]
     },
     {
-        "What sound does a monkey make?": [
-            "Ooh, ooh,",
+        "What noise does a monkey make?": [
+            "Ooh",
             "Roar",
-            "Gobble, gobble",
-            "Hissssssssssssssssss"
+            "Gobble",
+            "Hiss"
         ]
     },
     {
-        "What sound does a lion make?": [
+        "What noise does a lion make?": [
             "Roar",
-            "Woof, woof",
+            "Woof",
             "Meow",
-            "Tweet, tweet"
+            "Tweet"
         ]
     },
     {
-        "What sound does a bird make?": [
-            "Tweet, tweet",
-            "Oink, oink",
+        "What noise does a bird make?": [
+            "Tweet",
+            "Hiss",
             "Meow",
             "Roar"
         ]
     },
     {
-        "What sound does an owl make?": [
-            "Who, who",
-            "Quack, quack",
-            "Woof, woof",
+        "What noise does an owl make?": [
+            "Hoo",
+            "Quack",
+            "Woof",
             "Roar"
         ]
     },
     {
-        "What sound does a horse make?": [
+        "What noise does a horse make?": [
             "Neigh",
             "Roar",
             "Meow",
-            "Tweet, tweet"
+            "Tweet"
         ]
     },
     {
-        "What sound does a dinosaur make?": [
+        "What noise does a dinosaur make?": [
             "Roar",
-            "Oink, oink",
-            "Woof, woof",
+            "Oink",
+            "Woof",
             "Neigh"
         ]
     },
     {
-        "What sound does a pig make?": [
-            "Oink, oink",
+        "What noise does a pig make?": [
+            "Oink",
             "Meow",
-            "Gobble, gobble",
+            "Gobble",
             "Roar"
         ]
     },
     {
-        "What sound does a turkey make?": [
-            "Gobble, gobble",
-            "Tweet, tweet",
-            "Woof, woof",
+        "What noise does a turkey make?": [
+            "Gobble",
+            "Tweet",
+            "Woof",
             "Growl"
         ]
     },
     {
-        "What sound does a sheep make?": [
-            "Bahh, bahh",
-            "Who, who",
+        "What noise does a sheep make?": [
+            "Bahh",
+            "Hoo",
             "Roar",
-            "Hissssssssssssssssss"
+            "Hiss"
         ]
     },
     {
-        "What sound does a snake make?": [
-            "Hissssssssssssssssss",
-            "Oink, oink",
+        "What noise does a snake make?": [
+            "Hiss",
+            "Oink",
             "Neigh",
             "Meow"
         ]
     },
     {
-        "What sound does a wolf make?": [
-            "Howel",
-            "Woof, woof",
-            "Quack, quack",
+        "What noise does a wolf make?": [
+            "Arh-woo",
+            "Woof",
+            "Quack",
             "Roar"
         ]
     },
     {
-        "What sound does a hyena make?": [
+        "What noise does a hyena make?": [
             "Hee hee",
-            "Tweet, tweet",
-            "Who, who",
+            "Tweet",
+            "Hoo",
             "Neigh"
         ]
     },
     {
-        "What sound does a frog make?": [
-            "Ribbit, ribbit",
-            "Quack, quack",
-            "Woof, woof",
-            "Howel"
+        "What noise does a frog make?": [
+            "Ribbit",
+            "Quack",
+            "Woof",
+            "Arh-woo"
         ]
     },
     {
-        "What sound does a chicken make?": [
-            "Cluck, cluck",
-            "Gobble, gobble",
-            "Oink, oink",
+        "What noise does a chicken make?": [
+            "Cluck",
+            "Gobble",
+            "Oink",
             "Roar"
         ]
     },
     {
-        "What sound does a squirrel make?": [
+        "What noise does a squirrel make?": [
             "Squeak",
-            "Woof, woof",
+            "Woof",
             "Neigh",
-            "Tweet, tweet"
+            "Tweet"
         ]
     },
     {
-        "What sound does a cow make?": [
+        "What noise does a cow make?": [
             "Moo",
             "Neigh",
-            "Chirp, chirp, Chirp, chirp",
-            "Hissssssssssssssssss"
+            "Arh-woo",
+            "Hiss"
         ]
     },
     {
-        "What sound does a bee make?": [
+        "What noise does a bee make?": [
             "Buzz",
             "Roar",
             "Meow",
-            "Who, who"
+            "Hoo"
         ]
     },
     {
-        "What sound does a cricket make?": [
-            "Chirp, chirp",
+        "What noise does a cricket make?": [
+            "Chirp",
             "Buzz",
-            "Oink, oink",
-            "Woof, woof"
+            "Oink",
+            "Woof"
         ]
     },
     {
-        "What does an elephant sound sound like?": [
+        "What does an elephant noise sound like?": [
             "Trumpet",
-            "Chirp, chirp",
-            "Gobble, gobble",
+            "Chirp",
+            "Gobble",
             "Roar"
         ]
     },
     {
-        "What sound does a seal make?": [
-            "Bark, bark",
-            "Woof, woof",
+        "What noise does a seal make?": [
+            "Bark",
+            "Woof",
             "Meow",
             "Roar"
         ]
     },
     {
-        "What sound does a bear make?": [
+        "What noise does a bear make?": [
             "Growl",
             "Neigh",
-            "Oink, oink",
-            "Quack, quack"
+            "Oink",
+            "Quack"
         ]
     },
     {
-        "What sound does a dolphin make?": [
-            "Eee eee eee eee",
-            "Who, who",
+        "What noise does a dolphin make?": [
+            "Eee eee",
+            "Hoo",
             "Growl",
-            "Howel"
+            "Arh-woo"
         ]
     },
     {
-        "What sound does a tiger make?": [
+        "What noise does a tiger make?": [
             "Growl",
             "Neigh",
-            "Ribbit, ribbit",
-            "Quack, quack"
+            "Ribbit",
+            "Quack"
         ]
     },
     {
-        "What sound does a polar bear make?": [
+        "What noise does a polar bear make?": [
             "Growl",
-            "HHissssssssssssssssss",
-            "Bark, bark",
+            "Hiss",
+            "Bark",
             "Meow"
         ]
     },
     {
-        "What sound does a rhinoceros make?": [
+        "What noise does a rhinoceros make?": [
             "Huff",
             "Buzz",
             "Neigh",
-            "Quack, quack"
+            "Quack"
         ]
     },
     {
-        "What sound does a fox make?": [
-            "Howel",
+        "What noise does a fox make?": [
+            "Arh-woo",
             "Meow",
-            "Woof, woof",
+            "Woof",
             "Roar"
         ]
     },
     {
-        "What sound does a chipmunk make?": [
+        "What noise does a chipmunk make?": [
             "Squeak",
             "Chirp",
-            "Ribbit, ribbit",
+            "Ribbit",
             "Growl"
         ]
     }
@@ -642,6 +627,8 @@ function buildSpeechletResponseWithoutCard(output, repromptText, shouldEndSessio
 
 function buildResponse(sessionAttributes, speechletResponse) {
     return {
-        version: "1.0",
+        version: "1.1",
         sessionAttributes: sessionAttributes,
         response: speechletResponse
+    };
+}
